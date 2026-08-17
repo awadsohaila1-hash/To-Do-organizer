@@ -1,0 +1,172 @@
+:root {
+    --pink-dark: #c2185b;
+    --pink-mid: #e91e8c;
+    --pink-light: #ffd6e8;
+    --pink-pale: #fff0f6;
+    --pink-row: #fbe4ee;
+    --ink: #6b2c47;
+    --dim: #b58aa0;
+}
+
+* {
+    box-sizing: border-box;
+}
+.app >img {
+    width:100px;
+    display:block;
+    margin:0 auto 15px;
+}
+html,
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(160deg, #fff0f6, #ffe3ef);
+    color: var(--ink);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 40px 16px;
+}
+
+.app {
+    width: 100%;
+    max-width: 850px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 28px 26px;
+    box-shadow: 0 18px 40px rgba(194, 24, 91, 0.15);
+    border: 1px solid var(--pink-light);
+}
+
+h1 {
+    font-size: 32px;
+    margin: 0 0 22px;
+    text-align: center;
+    color: var(--pink-dark);
+}
+
+.add-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#taskInput {
+    flex: 1;
+    background-color: var(--pink-pale);
+    border: 1.5px solid var(--pink-light);
+    color: var(--ink);
+    padding: 11px 16px;
+    border-radius: 12px;
+    font-size: 14px;
+    outline: none;
+}
+
+#priority,
+#dueDate {
+    background-color: var(--pink-pale);
+    border: 1.5px solid var(--pink-light);
+    color: var(--ink);
+    padding: 11px;
+    border-radius: 12px;
+    font-size: 14px;
+    outline: none;
+}
+
+#addBtn {
+    background-color: var(--pink-mid);
+    color: white;
+    border: none;
+    padding: 0 22px;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#addBtn:hover {
+    background-color: var(--pink-dark);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid var(--pink-light);
+}
+
+thead th {
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    padding: 11px 4px;
+    background-color: var(--pink-mid);
+}
+
+tbody tr:nth-child(odd) {
+    background-color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--pink-row);
+}
+
+tbody td {
+    padding: 12px 8px;
+    font-size: 14px;
+    text-align: center;
+    border-bottom: 1px solid var(--pink-light);
+}
+
+.task-name {
+    transition: 0.2s;
+}
+
+tr.done .task-name {
+    text-decoration: line-through;
+    color: var(--dim);
+}
+
+input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+}
+
+.del-btn {
+    background: none;
+    border: none;
+    color: var(--pink-dark);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.empty-row td {
+    text-align: center;
+    color: var(--dim);
+    padding: 24px 0;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 18px;
+}
+
+#counter {
+    font-size: 13px;
+    color: var(--dim);
+}
+
+#clearAllBtn {
+    background: none;
+    border: 1px solid var(--pink-light);
+    color: var(--pink-dark);
+    padding: 7px 14px;
+    border-radius: 10px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+#clearAllBtn:hover {
+    background-color: var(--pink-pale);
+}
